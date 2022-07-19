@@ -5,112 +5,252 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+
     <title>Calculator</title>
   </head>
   <body>
-    <div class="flex content-center">
+    <div class="flex justify-center items-center p-10">
       <table class="border-separate border-spacing-2 border border-slate-500">
         <tr>
-          <td
-            colspan="3"
-            class="h-24 w-144 bg-green-800 text-white text-2xl rounded p-4"
-          >
-            <input type="text" placeholder="Enter the numbers" />
+          <td colspan="3" class="">
+            <!-- calculator input-->
+            <input
+              class="h-24 w-full bg-white text-black text-2xl font-bold text-right rounded outline outline-offset-2 outline-black p-4"
+              type="text"
+              id="result"
+              disabled
+            />
           </td>
 
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="c"
+              onclick="clearScreen()"
+              id="btn"
+            >
+              c
+            </button>
           </td>
         </tr>
         <!--numbers-->
         <tr>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="1"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="1"
+              onclick="display(1)"
+            >
+              1
+            </button>
           </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="2"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="2"
+              onclick="display(2)"
+            >
+              2
+            </button>
           </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="3"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="3"
+              onclick="display(3)"
+            >
+              3
+            </button>
           </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
-          </td>
-        </tr>
-        <tr>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
-          </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
-          </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
-          </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
-          </td>
-        </tr>
-        <tr>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
-          </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
-          </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
-          </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="/"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="/"
+              onclick="display('/')"
+            >
+              /
+            </button>
           </td>
         </tr>
         <tr>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="4"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="4"
+              onclick="display(4)"
+            >
+              4
+            </button>
           </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="5"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="5"
+              onclick="display(5)"
+            >
+              5
+            </button>
           </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="6"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="6"
+              onclick="display(6)"
+            >
+              6
+            </button>
           </td>
-          <td
-            class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
-          >
-            2
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="*"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="*"
+              onclick="display('*')"
+            >
+              *
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="7"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="7"
+              onclick="display(7)"
+            >
+              7
+            </button>
+          </td>
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="8"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="8"
+              onclick="display(8)"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="9"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="9"
+              onclick="display(9)"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="-"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="-"
+              onclick="display('-')"
+            >
+              -
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <input
+              type="button"
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="0"
+            /> -->
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="0"
+              onclick="display(0)"
+            >
+              0
+            </button>
+          </td>
+          <td>
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="."
+              onclick="display('.')"
+            >
+              .
+            </button>
+          </td>
+          <td>
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="="
+              onclick="calculate()"
+              id="btn"
+            >
+              =
+            </button>
+          </td>
+          <td>
+            <button
+              class="h-24 w-48 bg-green-800 text-center rounded text-2xl font-bold text-white hover:bg-green-700"
+              value="+"
+              onclick="display('+')"
+            >
+              +
+            </button>
           </td>
         </tr>
       </table>
